@@ -1,0 +1,484 @@
+﻿
+
+body {
+    height: 2000px;
+    background-color: #162447;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 47px;
+    width: 100%;
+    background-color: #1f4068;
+    z-index: 2;
+}
+
+    nav .logo {
+        width: 40px;
+        height: 46px;
+    }
+
+        nav .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    nav .search-box {
+        position: absolute;
+        left: 150px;
+        top: 20%;
+        height: 28px;
+        width: 450px;
+        background-color: #f6f6f6;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    nav .links {
+        position: absolute;
+        top: 0px;
+        left: 47%;
+    }
+
+        nav .links ul {
+            list-style-type: none;
+        }
+
+            nav .links ul li {
+                float: left;
+                padding: 12px 15px 0px;
+                margin-left: 10px;
+                border-right: 1px solid #1b1b2f;
+            }
+
+                nav .links ul li a {
+                    font-family: Helvetica, Arial, sans-serif;
+                    color: #f6f6f6;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 28px;
+                }
+
+.clear-fix {
+    clear: both;
+}
+
+.header {
+    width: 70%;
+    height: 370px;
+    background: url(img/53361275_622716798149764_3735465501237706752_o.jpg) center center;
+    background-size: cover;
+    position: relative;
+    float: left;
+    border: 1px solid #e43f5a;
+}
+
+.pages {
+    width: 22%;
+    height: 100vh;
+    background-color: #162447;
+    float: right;
+    position: fixed;
+    right: 0;
+    border-left: 1px solid #e43f5a;
+}
+
+.header .rounded-profile {
+    position: absolute;
+    bottom: -40px;
+    left: 6%;
+    width: 160px;
+    height: 160px;
+    background-image: url(img/7.jpg);
+    background-size: contain;
+    padding: 3px;
+    border: 1px solid #e43f5a;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 3px 3px 7px #e43f5a, -3px -3px 7px #e43f5a;
+}
+
+.cont {
+    width: 70%;
+}
+
+.intro {
+    background-color: #f6f6f6;
+    width: 32%;
+    height: 950px;
+    margin-top: 70px;
+    border: 1px solid #e43f5a;
+    float: left;
+    position: relative;
+}
+
+    .intro .info-image {
+        width: 60px;
+        height: 60px;
+        background-color: #e43f5a;
+        padding: 10px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        position: absolute;
+        top: 13px;
+        left: 40%;
+    }
+
+    .intro h4 {
+        width: 17%;
+        position: absolute;
+        top: 80px;
+        left: 40%;
+        font-size: 28px;
+        font-weight: 600;
+        color: #1b1b2f;
+    }
+
+    .intro .bio {
+        position: absolute;
+        top: 120px;
+        left: 64px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .intro .btn-bio {
+        position: absolute;
+        top: 155px;
+        left: 10%;
+        padding: 8px 15px;
+        width: 80%;
+        background-color: #1f4068;
+        color: #f6f6f6;
+        font-size: 18px;
+        font-weight: 600;
+        border: 0;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border: 1px solid #e43f5a;
+    }
+
+.job1 {
+    position: absolute;
+    top: 200px;
+}
+
+    .job1 .job-image {
+        width: 20%;
+        float: left;
+        margin-top: 28px;
+        margin-left: 30px;
+    }
+
+    .job1 img {
+        width: 70%;
+    }
+
+    .job1 p {
+        margin-top: 40px;
+        width: 65%;
+        float: right;
+        margin-left: -40px;
+    }
+
+.job2 {
+    position: absolute;
+    top: 240px;
+}
+
+    .job2 .job-image {
+        width: 19%;
+        float: left;
+        margin-top: 28px;
+        margin-left: 28px;
+    }
+
+    .job2 img {
+        width: 60%;
+    }
+
+    .job2 p {
+        margin-top: 40px;
+        width: 77%;
+        float: right;
+        margin-left: -30px;
+    }
+
+.job3 {
+    position: absolute;
+    top: 280px;
+}
+
+    .job3 .job-image {
+        width: 20%;
+        float: left;
+        margin-top: 28px;
+        margin-left: 27px;
+    }
+
+    .job3 img {
+        width: 70%;
+    }
+
+    .job3 p {
+        margin-top: 40px;
+        width: 71%;
+        float: right;
+        margin-left: -40px;
+    }
+
+.job4 {
+    position: absolute;
+    top: 320px;
+}
+
+    .job4 .job-image {
+        width: 70%;
+        float: left;
+        margin-top: 37px;
+        margin-left: 26px;
+    }
+
+    .job4 img {
+        width: 48%;
+    }
+
+    .job4 p {
+        margin-top: -37px;
+        width: 14%;
+        float: right;
+        margin-left: 3px;
+        font-size: 20px;
+    }
+
+.details {
+    position: absolute;
+    top: 415px;
+    left: 10%;
+    padding: 8px 15px;
+    width: 80%;
+    background-color: #1f4068;
+    color: #f6f6f6;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 1px solid #e43f5a;
+}
+
+.features {
+    width: 100%;
+    height: 400px;
+    background: url('img/8.jpg') center center;
+    background-size: cover;
+    position: absolute;
+    bottom: 2px;
+}
+
+.posts {
+    width: 65%;
+    height: 2350px;
+    margin-top: 70px;
+    float: right;
+}
+
+    .posts .post {
+        width: 100%;
+        height: 750px;
+        background-color: #1f4068;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+        .posts .post .pro-circle {
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            background-image: url('img/7.jpg');
+            background-size: cover;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            float: left;
+        }
+
+        .posts .post .pro-name {
+            width: 110px;
+            height: 50px;
+            float: right;
+            margin-right: 72%;
+            margin-top: 29px;
+        }
+
+            .posts .post .pro-name a {
+                text-decoration: none;
+                color: #e43f5a;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+        .posts .post .post-details {
+            font-family: Helvetica, Arial, sans-serif;
+            height: 60px;
+            width: 100%;
+            margin-left: 22px;
+            font-size: 18px;
+            line-height: 25px;
+            font-weight: 400;
+        }
+
+            .posts .post .post-details p {
+                color: #f6f6f6;
+            }
+
+        .posts .post .post-photo {
+            width: 100%;
+            height: 520px;
+        }
+
+.likes {
+    position: relative;
+}
+
+    .likes .first-react {
+        position: absolute;
+        top: 10px;
+        margin-left: 4px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color: #ffc50b;
+    }
+
+    .likes .second-react {
+        position: absolute;
+        left: 26px;
+        top: 10px;
+        margin-left: 0px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    .likes .third-react {
+        position: absolute;
+        left: 45px;
+        top: 9px;
+        margin-left: 0px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+.reactions .react {
+    width: 30%;
+    height: 100px;
+    float: left;
+    margin-left: 2px;
+}
+
+    .reactions .react .react-like {
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin-top: 42px;
+        margin-left: 33px;
+    }
+
+    .reactions .react:first-child {
+        margin-left: 10px;
+    }
+
+    .reactions .react p {
+        color: #1b1b2f;
+        font-size: 22px;
+        margin-top: 52px;
+        margin-right: 41px;
+        float: right;
+    }
+
+.pages h3 {
+    width: 33%;
+    color: #e43f5a;
+    font-size: 22px;
+    line-height: 19px;
+    font-weight: 600;
+    margin: 30px auto;
+}
+
+.pages .page {
+    width: 100%;
+    height: 70px;
+    background-color: #1f4068;
+    margin-bottom: 10px;
+}
+
+.page .rounded-page {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.rounded-page img {
+    object-fit: cover;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.page p {
+    width: 77%;
+    font-family: Helvetica, Arial, sans-serif;
+    float: right;
+    margin-right: 3px;
+    margin-top: 18px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #f6f6f6;
+    text-align: center;
+}

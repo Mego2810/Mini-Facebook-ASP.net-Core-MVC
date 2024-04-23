@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Min_Facebook.DAL.Contexts;
+
 namespace Min_Facebook.PL
 {
     public class Program
@@ -8,6 +11,10 @@ namespace Min_Facebook.PL
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<MinFbDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("CS"));
+            });
 
             var app = builder.Build();
 
