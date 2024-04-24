@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,16 +9,8 @@ using System.Threading.Tasks;
 
 namespace Min_Facebook.DAL.Models
 {
-    public class User
+    public class User: IdentityUser
     {
-        [Key]
-        public int UseId { get; set; }
-        [Required(ErrorMessage = "Please Enter a Valid Name")]
-        [MaxLength(30)]
-        public string Name { get; set; }
-        [Required(ErrorMessage ="Please Enter a Valid Email")]
-        [EmailAddress]
-        public string Email { get; set; }
         public byte[] Photo { get; set; }
         [MaxLength(100)]
 
@@ -28,6 +21,8 @@ namespace Min_Facebook.DAL.Models
         [Phone]
         public string Phone { get; set; } 
         public string Gender { get; set; }
+        public virtual List<Post> Posts { get; set; } = new List<Post>();
+
 
 
 

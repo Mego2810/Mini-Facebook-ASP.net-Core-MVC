@@ -8,18 +8,17 @@ using System.Threading.Tasks;
 
 namespace Min_Facebook.DAL.Models
 {
-    public class Posts
+    public class Post
     {
         [Key]
         public int PostID { get; set; }
 
-        [Column("UserId")]
-        public int UserId { get; set; }
+        [ForeignKey("User")]
+        public string UserId { get; set; }
         public DateTime DateOfCreation { get; set; }
         [Required]
         public string Content { get; set; }
 
-        [ForeignKey("UseId")]
         public virtual User User { get; set; }
 
     }

@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Min_Facebook.DAL.Contexts;
+using Microsoft.AspNetCore.Identity;
+using Min_Facebook.DAL.Models;
 
 namespace Min_Facebook.PL
 {
@@ -16,6 +18,8 @@ namespace Min_Facebook.PL
                 options.UseSqlServer(builder.Configuration.GetConnectionString("CS"));
             });
 
+            builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<MinFbDbContext>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -30,9 +34,9 @@ namespace Min_Facebook.PL
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
-
+            app.MapRazorPages();
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
