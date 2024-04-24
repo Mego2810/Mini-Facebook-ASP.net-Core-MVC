@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Min_Facebook.DAL.Contexts;
 
-public class MinFbDbContext : IdentityDbContext<IdentityUser>
+public class MinDbContext : IdentityDbContext<IdentityUser>
 {
-    public MinFbDbContext(DbContextOptions options)
+    public MinDbContext(DbContextOptions options)
         : base(options)
     {
     }

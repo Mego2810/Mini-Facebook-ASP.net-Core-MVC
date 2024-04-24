@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Min_Facebook.DAL.Contexts;
 using Microsoft.AspNetCore.Identity;
 using Min_Facebook.DAL.Models;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Min_Facebook.PL
 {
@@ -13,12 +14,16 @@ namespace Min_Facebook.PL
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // Add DbContext with SQL Server provider.
             builder.Services.AddDbContext<MinFbDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("CS"));
-            });
+            }, ServiceLifetime.Singleton);
 
-            builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<MinFbDbContext>();
+            // Configure Identity with default user and role classes.
+            builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<MinFbDbContext>(); // Use MinFbDbContext as the data store for Identity.
 
             var app = builder.Build();
 
@@ -34,8 +39,8 @@ namespace Min_Facebook.PL
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAuthentication();
-            app.UseAuthorization();
+            app.UseAuthentication(); // Enable authentication middleware.
+            app.UseAuthorization(); // Enable authorization middleware.
             app.MapRazorPages();
             app.MapControllerRoute(
                 name: "default",
